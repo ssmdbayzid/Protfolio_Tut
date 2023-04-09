@@ -20,9 +20,21 @@ module.exports = {
         "gradiant-rainblue" : "linaer-CanvasGradient(90deg, #24CBFF 14.53%, #FC59FF 69.37%, #FFBD0C 117.73%)",
       }),
       fontFamily: {
-        playfair: ["Playfair", "sans-serif"]
-      }
-    },
+        playfair: ["Playfair", "sans-serif"],
+        opensents : ["open Sans", "sans-sharif"]
+      },
+      content: {
+        brush :"url('./assets/brush.png",
+        person1 :"url('./assets/person-1.png",
+        person2 :"url('./assets/person-2.png",
+        person3 :"url('./assets/person-3.png",       
+      },
+      screens: {
+        xs:"480px",
+        sm:"768px",
+        md:"1060px",
+      },
+    }
   },
   plugins: [],
 }
