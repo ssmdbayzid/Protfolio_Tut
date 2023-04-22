@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
+import DotGroup from "./scenes/DotGroup";
 
 
 function App() {
@@ -24,7 +25,12 @@ function App() {
       selectedPage={selectedPage}
       setSelectedPage={setSelectedPage}
       />
-      
+      {isAvobemediumScreens && (
+        <DotGroup
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+        />
+      )}
     </div>
   );
 }
