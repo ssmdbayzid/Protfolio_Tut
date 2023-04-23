@@ -7,6 +7,7 @@ import LineGradient from "./components/LineGradient";
 import Skills from "./scenes/Skills";
 import Projects from "./scenes/Projects";
 import Testimonial from "./scenes/Testimonial";
+import Contact from "./scenes/Contact";
 
 
 function App() {
@@ -55,6 +56,11 @@ function App() {
       <LineGradient />
       <div className="w-5/6 mx-auto ">
       <Testimonial />
+      </div>
+
+      <LineGradient />
+      <div className="w-5/6 mx-auto ">
+      <Contact />
       </div>
     </div>
   );

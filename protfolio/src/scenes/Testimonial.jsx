@@ -22,7 +22,7 @@ const Testimonial = () => {
         <p className="font-playFair font-semibold text-4xl mb-5 text-red">
             TESTIMONIALS
         </p>
-        <LineGradient width="mx-auto w-2/4" />
+        <LineGradient width=" ml-20 w-40 text-start" />
 
         <p className="mt-10">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quod incidunt enim saepe dicta consequuntur.
