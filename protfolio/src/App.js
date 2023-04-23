@@ -2,6 +2,9 @@ import {useEffect, useState} from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
 import DotGroup from "./scenes/DotGroup";
+import Landing from "./scenes/Landing";
+import LineGradient from "./components/LineGradient";
+import Skills from "./scenes/Skills";
 
 
 function App() {
@@ -25,12 +28,22 @@ function App() {
       selectedPage={selectedPage}
       setSelectedPage={setSelectedPage}
       />
+      <div className="w-5/6 mx-auto h-full">
       {isAvobemediumScreens && (
         <DotGroup
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
         />
       )}
+      <Landing
+      selectedPage={selectedPage}
+      setSelectedPage={setSelectedPage}
+      />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto h-full">
+      <Skills />
+      </div>
     </div>
   );
 }
