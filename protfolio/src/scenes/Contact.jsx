@@ -16,8 +16,7 @@ const onSubmit = async (e) => {
 
   return (
     <section id="contact" className="py-48">
-    <motion.div
-        
+    <motion.div       
          initial="hidden"
          whileInView="visible"
          viewport={{once:true, amount:0.5}}
@@ -28,11 +27,11 @@ const onSubmit = async (e) => {
          }}
         >
         <div>
-        <p className="font-playfair font-semibold text-4xl mb-5">
+        <p className="font-playFair md:text-right font-semibold text-4xl ">
             <span  className="text-yellow">CONTACT ME</span> TO GET STARTED
         </p>
         <div className="flex md:justify-end my-5">
-        <LineGradient width="w-2/4 mx-auto" />
+        <LineGradient width="md:w-1/4 w-2/4 " />
         </div>
         </div>       
 
@@ -43,13 +42,13 @@ const onSubmit = async (e) => {
 
         {/* IMAGEW & FORM  */}
         <motion.div
-         className="basis-1/2 flex justify-center"
+         className="basis-1/2 flex justify-center md:mt-5"
          initial="hidden"
          whileInView="visible"
-         viewport={{once:true, amount:0.5}}
+         viewport={{once:true, amount: 0.5}}
          transition={{duration:0.5}}
          variants={{
-             hidden: {opacity: 0, y: - 50},
+             hidden: {opacity: 0, y: 50},
              visible:{opacity:1, y:0}
          }}
         >
@@ -57,20 +56,20 @@ const onSubmit = async (e) => {
         </motion.div>
 
         <motion.div
-        className="basis-1/2 mt-10 md:mt-0"
+        className="basis-1/2 mt-10 md:mt-5"
         initial="hidden"
         whileInView="visible"
         viewport={{once:true, amount:0.5}}
         transition={{ delay: 0.2, duration: 0.5}}
         variants={{
-            hidden: {opacity: 0, y: - 50},
+            hidden: {opacity: 0, y: 50},
             visible:{opacity:1, y:0}
         }}
         >
         <form
         target="_black"
         onSubmit={onSubmit}   
-        action=''     
+        action='https://formsubmit.co/ssmd.bayzid1998@gmail.com'     
         method="POST"
         >
             <input
@@ -84,7 +83,6 @@ const onSubmit = async (e) => {
                 <p className="text-red mt-1">
                     {errors.name.type === "required" && "This field is required. "}
                     {errors.name.type === "maxLength" && "Max length is 100 char."}
-
                 </p>
             )}
 
@@ -92,7 +90,7 @@ const onSubmit = async (e) => {
             className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-3" type="text" placeholder="Email"
             {...register("email", {
                 required: true,
-               pattern: /^[A-Z0-9]._%+-]+@[A-Z0-9.-]+\.[A-Z]{2},$/i,
+            //    pattern: /^[A-Z0-9]._%+-]+@[A-Z0-9.-]+\.[A-Z]{2},$/i,
             })}/>
                 
            {errors.email && (<p className="text-red mt-1">
@@ -100,20 +98,24 @@ const onSubmit = async (e) => {
             {errors.email.type === "required" && "This is required."}
             {errors.email.type === "pattern" && "Invalid email address."}
             </p>)}
-
-         <input
-            className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-3" type="text" placeholder="Message" row="4" cols="50"
+         <textarea
+            className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-3" type="text" placeholder="Message" rows="4" cols="60"
             {...register("message", {
                 required: true,
                maxLength: 2000,
             })}/>
                 
-           {errors.message && (<p className="text-red mt-1">
-            
+           {errors.message && (<p className="text-red mt-1">            
             {errors.message.type === "required" && "This is required."}
-            {errors.message.type === "maxLength" && "Max length is 100 char."}
+            {errors.message.type === "maxLength" && "Max length is 2000 char."}
             </p>)}
 
+            <button
+                type="submit"
+                className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+            >
+                SEND MESSAGE
+            </button>
         </form>
 
         </motion.div>

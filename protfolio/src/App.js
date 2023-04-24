@@ -43,8 +43,10 @@ function App() {
       setSelectedPage={setSelectedPage}
       />
       </div>
+      
       <LineGradient />
-      <div className="w-5/6 mx-auto ">
+      
+      <div className="w-5/6 mx-auto">
       <Skills />
       </div>
 

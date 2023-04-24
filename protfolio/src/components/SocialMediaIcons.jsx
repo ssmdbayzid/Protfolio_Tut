@@ -7,7 +7,7 @@ import instagram from '../assets/instagram.png'
 
 const SocialMediaIcons = () => {
   return (
-    <div className="flex justify-center md:justify-start ppy-10 gap-7">
+    <div className="flex justify-center md:justify-start py-10 gap-7">
         <a className="hover:opacity-50 transition duration-500"
             href="https://www.facebook.com/"
             target="_black"
