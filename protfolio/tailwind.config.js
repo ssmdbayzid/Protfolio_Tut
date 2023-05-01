@@ -26,6 +26,7 @@ module.exports = {
         opensents : ["open Sans", "sans-sharif"]
       },
       content: {
+        sliderBg: "url('https://www.codesands.com/wp-content/plugins/makro-core/widgets/testimonials/view/images/shape_12.png')",
         brush :"url('./assets/brush.png')",
         person1 :"url('./assets/person-1.png')",
         person2 :"url('./assets/person-2.png')",

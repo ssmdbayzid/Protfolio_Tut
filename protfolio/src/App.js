@@ -8,6 +8,7 @@ import Skills from "./scenes/Skills";
 import Projects from "./scenes/Projects";
 import Testimonial from "./scenes/Testimonial";
 import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer";
 
 
 function App() {
@@ -64,6 +65,8 @@ function App() {
       <div className="w-5/6 mx-auto ">
       <Contact />
       </div>
+
+      <Footer />
     </div>
   );
 }
